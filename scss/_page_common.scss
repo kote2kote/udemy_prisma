@@ -1,0 +1,349 @@
+// ==================================================
+// ■共通設定
+// ==================================================
+// .elment.com
+// ブロック要素で共通要素
+//
+// .c_element
+// プロパティの共通要素
+
+@use 'variables' as var;
+@use 'functions' as fn;
+@use 'mixins' as mix;
+
+// -- animation -------------- //
+.c_admin-btn-flash {
+  animation: flash 1s linear infinite;
+}
+@keyframes flash {
+  0% {
+    background-color: rgb(55, 65, 81);
+  }
+
+  50% {
+    background-color: rgb(174, 180, 193);
+  }
+  100% {
+    background-color: rgb(55, 65, 81);
+  }
+}
+// -- text-------------- //
+.c_text-base {
+  font-size: 16px;
+  @include mix.bp(lg) {
+    font-size: fn.vw(16, var.$v-design-sm);
+  }
+}
+.c_text-sm {
+  font-size: 14px;
+  // @include mix.bp(lg) {
+  //   font-size: fn.vw(10, var.$v-design-sm);
+  // }
+}
+
+.c_text-lg {
+  font-size: 18px;
+  @include mix.bp(lg) {
+    font-size: fn.vw(12, var.$v-design-sm);
+  }
+}
+.c_text-base {
+  font-size: 16px;
+  @include mix.bp(lg) {
+    font-size: fn.vw(11, var.$v-design-sm);
+  }
+}
+.c_text-11 {
+  font-size: 11px;
+  // @include mix.bp(lg) {
+  //   font-size: fn.vw(9, var.$v-design-sm);
+  // }
+}
+
+// -- 表示行数 -------------- //
+.c_line-clamp {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  &.c_line-clamp-1 {
+    -webkit-line-clamp: 1;
+  }
+  &.c_line-clamp-2 {
+    -webkit-line-clamp: 2;
+  }
+  &.c_line-clamp-3 {
+    -webkit-line-clamp: 3;
+  }
+  &.c_line-clamp-4 {
+    -webkit-line-clamp: 4;
+  }
+  &.c_line-clamp-5 {
+    -webkit-line-clamp: 5;
+  }
+}
+
+// -- フェードイン・フェードアウト -------------- //
+// .fadeIn2 {
+//   animation-name: fadeInAnime2;
+//   animation-duration: 0.5s;
+//   // animation-delay: 1s;
+//   animation-fill-mode: forwards;
+//   opacity: 0;
+// }
+
+// @keyframes fadeInAnime2 {
+//   from {
+//     opacity: 0;
+//   }
+
+//   to {
+//     opacity: 1;
+//   }
+// }
+.fadeIn2 {
+  opacity: 1;
+}
+.fadeIn {
+  animation-name: fadeInAnime;
+  animation-duration: 0.5s;
+  // animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+// .fadeOut {
+//   animation-name: fadeOutAnim;
+//   animation-duration: 0.5s;
+
+//   // animation-delay: 0.5s;
+//   animation-fill-mode: forwards;
+//   opacity: 1;
+// }
+
+// @keyframes fadeOutAnim {
+//   from {
+//     opacity: 1;
+//   }
+
+//   to {
+//     opacity: 0;
+//     display: none !important;
+//   }
+// }
+
+// -- タイトル -------------- //
+.out_user.com,
+.out_linksh.com {
+  // @include mix.bp(md) {
+  //   @apply px-4;
+  // }
+
+  > .inner {
+    min-height: 100vh;
+
+    max-width: 1000px;
+    @apply mx-auto;
+  }
+}
+
+.c_el_bg-img {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-image: linear-gradient(180deg, transparent 0 30%, #000 70% 100%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      180deg,
+      // rgba(2, 0, 36, 0) 0%,
+      // rgba(2, 0, 36, 0) 60%,
+      // rgba(0, 0, 0, 1) 80%,
+      // rgba(43, 123, 224, 1) 100%
+      rgba(2, 0, 36, 0) 0%,
+      rgba(2, 0, 36, 0) 60%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(43, 123, 224, 1) 100%
+    );
+  }
+}
+
+.c_sec-contents {
+  > .inner {
+    margin-top: 35%;
+  }
+}
+.out_contents.com {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+.swiper_out-contents {
+  padding-top: 15%;
+}
+.sec_user-detail.com {
+  // &.c_pd {
+  //   @apply px-4;
+  //   @include mix.bp(sm) {
+  //     padding-left: fn.vw(18, var.$v-design-sm);
+  //     padding-right: fn.vw(18, var.$v-design-sm);
+  //   }
+  // }
+  .out_thumb {
+    height: 50px;
+    @include mix.bp(md) {
+      // height: fn.vw(62, var.$v-design-sm);
+      height: 120px;
+    }
+    &.is-via {
+      height: 80px;
+      @include mix.bp(md) {
+        // height: fn.vw(62, var.$v-design-sm);
+        height: 160px;
+      }
+    }
+    &.c_height {
+      height: 45px;
+      @include mix.bp(md) {
+        // height: fn.vw(62, var.$v-design-sm);
+        height: 90px;
+      }
+    }
+    .el_name {
+      @apply w-1/2;
+
+      // width: 350px;;
+    }
+    .el_thumb {
+      @apply rounded-full shadow-md;
+      width: 124px;
+      height: 124px;
+      &.via {
+        width: 62px;
+        height: 62px;
+      }
+      @include mix.bp(md) {
+        width: 248px;
+        height: 248px;
+        &.via {
+          width: 124px;
+          height: 124px;
+        }
+      }
+      //     @include mix.bp(lg) {
+      //       @apply shadow-lg;
+      //       width: fn.vw(124, var.$v-design-sm);
+      //       max-width: 235px;
+      //       &.via {
+      //         width: fn.vw(40, var.$v-design-sm);
+      //         max-width: 0px;
+      //       }
+      //     }
+      //     // transform: translateY(-50%);
+    }
+  }
+  .el_desc {
+    @apply text-sm lg:text-base;
+  }
+}
+
+// ==================================================
+// 以下はテスト用
+// ==================================================
+.com_links {
+  &:not(:last-child) {
+    @apply pb-12;
+    @include mix.bp(lg) {
+      // padding-bottom: 177px;
+      // padding-bottom: fn.vw(40, var.$v-design-sm);
+      // @apply pb-20;
+    }
+  }
+  > .out-title {
+    &.c_title {
+      @apply h-[80px];
+
+      @include mix.bp(lg) {
+        @apply h-[100px];
+      }
+    }
+    &.c_title2 {
+      @apply h-[60px];
+
+      @include mix.bp(lg) {
+        @apply h-[60px];
+      }
+    }
+  }
+  .el_title {
+    &.c_font {
+      @apply text-white font-bold;
+    }
+    &.test {
+      // width: 800px;
+      // @include mix.bp(maxlg) {
+      //   width: fn.vw(800, var.$v-design-sm);
+      // }
+    }
+    // &.c_rounded {
+    //   border-top-right-radius: 1rem;
+    //   border-bottom-right-radius: 1rem;
+    // }
+  }
+  .el_user-fav {
+    &.test {
+      // width: 200px;
+      // @include mix.bp(maxlg) {
+      //   width: fn.vw(200, var.$v-design-sm);
+      // }
+    }
+  }
+  .el_pin {
+    width: 37px;
+    top: 8px;
+    left: 1rem;
+    @include mix.bp(lg) {
+      width: 70px;
+      // width: fn.vw(30, var.$v-design-sm);
+      // left: fn.vw(10, var.$v-design-sm);
+    }
+  }
+  .out_links-lists {
+    > li {
+      @apply py-2;
+      background: var.$v-color-03;
+      &:first-child {
+        @apply border-gray-300 border-t;
+      }
+      .out_l {
+        width: 55px;
+        @include mix.bp(lg) {
+          width: fn.vw(55, var.$v-design-sm);
+        }
+      }
+    }
+  }
+  &.c_top {
+    // トップページ用
+    > .out-title {
+      &.c_title {
+        @apply h-[40px];
+
+        @include mix.bp(lg) {
+          @apply h-[80px];
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,403 @@
+// ==================================================
+// variables
+// ==================================================
+
+// -- color --------------------
+// 必須
+$v-color-font: #5f5f5f;
+$v-color-bg: #fff;
+$v-color-link: #fff;
+$v-color-hover-link: #c2c2c2;
+
+// パーツ別
+$v-color-01: #5f5f5f; // フォントカラー
+$v-color-02: #0f61a8; // 青
+$v-color-03: #f4f4f4; // odd背景
+$v-color-04: #dd5363; // グレー背景
+$v-color-05: #4ba200; // 表ヘッダー背景
+$v-color-06: #e2e2e2; // 表の線
+$v-color-07: #434343; // login-footer
+$v-color-08: #939393; // 薄めのフォント
+$v-color-09: #fff; // 未定
+$v-color-10: #fff; // 未定
+
+// よく使う
+.v-color-text-gray {
+  color: $v-color-01;
+}
+
+.v-color-blue {
+  color: $v-color-02;
+}
+.v-color-gray-434343 {
+  color: $v-color-07;
+}
+.v-bgcolor-gray-434343 {
+  background-color: $v-color-07;
+}
+.v-color-gray-939393 {
+  color: $v-color-08;
+}
+.v-bgcolor-gray-939393 {
+  background-color: $v-color-08;
+}
+.v-color-border-blue {
+  border-color: $v-color-02;
+}
+.v-bgcolor-blue {
+  background-color: $v-color-02;
+}
+.v-bgcolor-blue-login {
+  // background: linear-gradient(#3272dc, #209cee);
+  background-color: #3274dd;
+}
+.v-color-fav {
+  color: $v-color-04;
+}
+.v-color-save {
+  color: $v-color-05;
+}
+.v-bgcolor-gray-100 {
+  background-color: $v-color-03;
+}
+@mixin v-color-title-blue {
+  color: $v-color-02;
+}
+@mixin v-bgcolor-title-blue {
+  background-color: $v-color-02;
+}
+.v-bgcolor-gray {
+  background-color: $v-color-04;
+}
+.v-bgcolor-th-gray {
+  background-color: $v-color-05;
+}
+@mixin v-bgcolor-gray {
+  background-color: $v-color-04;
+}
+@mixin v-bgcolor-th-gray {
+  background-color: $v-color-05;
+}
+@mixin v-bordercolor-table {
+  border-color: $v-color-06;
+}
+@mixin v-bgcolor-lightgray {
+  background-color: $v-color-07;
+}
+
+// --------------------------------------------------
+// theme color
+// --------------------------------------------------
+$theme_color-blue: #0f61a8; //15,97,168
+$theme_color-pink: #db2778;
+$theme_color-green: #1e7857;
+$theme_color-orange: #c67407;
+$theme_color-gray: #373737;
+
+// -- default-------------- //
+a.theme_linkcolor-default {
+  color: $theme_color-blue;
+}
+.theme_color-default {
+  color: $theme_color-blue;
+}
+.theme_bgcolor-default {
+  background-color: $theme_color-blue;
+}
+.theme_bordercolor-default {
+  border-color: $theme_color-blue;
+}
+.theme_pagebg-default {
+  background: linear-gradient(#3272dc, #209cee);
+}
+.theme-img-gradient-default {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-image: linear-gradient(180deg, transparent 0 30%, #000 70% 100%);
+    // background: rgb(2, 0, 36);
+    background: linear-gradient(
+      180deg,
+      // rgba(2, 0, 36, 0) 0%,
+      // rgba(2, 0, 36, 0) 60%,
+      // rgba(0, 0, 0, 1) 80%,
+      // rgba(43, 123, 224, 1) 100%
+      rgba(2, 0, 36, 0) 0%,
+      rgba(2, 0, 36, 0) 60%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(43, 123, 224, 1) 100%
+    );
+  }
+}
+
+.theme-cm-default {
+  box-sizing: border-box;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(4, 106, 231, 0.1),
+    rgba(4, 106, 231, 0.1) 10px,
+    rgba(255, 255, 255, 0.2) 0,
+    rgba(255, 255, 255, 0.2) 20px
+  );
+  border: solid 1px rgba(4, 106, 231, 0.2);
+}
+
+// -- pink -------------- //
+a.theme_linkcolor-pink {
+  color: $theme_color-pink;
+}
+.theme_color-pink {
+  color: $theme_color-pink;
+}
+.theme_bgcolor-pink {
+  background-color: $theme_color-pink;
+}
+.theme_pagebg-pink {
+  background: linear-gradient(#d9147a, #d633ab);
+}
+.theme_bordercolor-pink {
+  border-color: $theme_color-pink;
+}
+.theme-img-gradient-pink {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-image: linear-gradient(180deg, transparent 0 30%, #000 70% 100%);
+    // background: rgb(2, 0, 36);
+    background: linear-gradient(
+      180deg,
+      // rgba(2, 0, 36, 0) 0%,
+      // rgba(2, 0, 36, 0) 60%,
+      // rgba(0, 0, 0, 1) 80%,
+      // rgba(43, 123, 224, 1) 100%
+      rgba(2, 0, 36, 0) 0%,
+      rgba(2, 0, 36, 0) 60%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(217, 21, 124, 1) 100%
+    );
+  }
+}
+
+.theme-cm-pink {
+  box-sizing: border-box;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(250, 0, 158, 0.1),
+    rgba(250, 0, 158, 0.1) 10px,
+    rgba(255, 255, 255, 0.2) 0,
+    rgba(255, 255, 255, 0.2) 20px
+  );
+  border: solid 1px rgba(250, 0, 158, 0.2);
+}
+
+// -- green -------------- //
+a.theme_linkcolor-green {
+  color: $theme_color-green;
+}
+.theme_color-green {
+  color: $theme_color-green;
+}
+.theme_bgcolor-green {
+  background-color: $theme_color-green;
+}
+.theme_pagebg-green {
+  background: linear-gradient(#2e9505, #55c529);
+}
+.theme_bordercolor-green {
+  border-color: $theme_color-green;
+}
+.theme-img-gradient-green {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-image: linear-gradient(180deg, transparent 0 30%, #000 70% 100%);
+    // background: rgb(2, 0, 36);
+    background: linear-gradient(
+      180deg,
+      // rgba(2, 0, 36, 0) 0%,
+      // rgba(2, 0, 36, 0) 60%,
+      // rgba(0, 0, 0, 1) 80%,
+      // rgba(43, 123, 224, 1) 100%
+      rgba(2, 0, 36, 0) 0%,
+      rgba(2, 0, 36, 0) 60%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(48, 151, 7, 1) 100%
+    );
+  }
+}
+
+.theme-cm-green {
+  box-sizing: border-box;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 186, 56, 0.1),
+    rgba(0, 186, 56, 0.1) 10px,
+    rgba(255, 255, 255, 0.2) 0,
+    rgba(255, 255, 255, 0.2) 20px
+  );
+  border: solid 1px rgba(0, 186, 56, 0.2);
+}
+
+// -- orange -------------- //
+a.theme_linkcolor-orange {
+  color: $theme_color-orange;
+}
+.theme_color-orange {
+  color: $theme_color-orange;
+}
+.theme_bgcolor-orange {
+  background-color: $theme_color-orange;
+}
+.theme_bordercolor-orange {
+  border-color: $theme_color-orange;
+}
+.theme_pagebg-orange {
+  background: linear-gradient(#c57307, #ed9a2e);
+}
+.theme-img-gradient-orange {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-image: linear-gradient(180deg, transparent 0 30%, #000 70% 100%);
+    // background: rgb(2, 0, 36);
+    background: linear-gradient(
+      180deg,
+      // rgba(2, 0, 36, 0) 0%,
+      // rgba(2, 0, 36, 0) 60%,
+      // rgba(0, 0, 0, 1) 80%,
+      // rgba(43, 123, 224, 1) 100%
+      rgba(2, 0, 36, 0) 0%,
+      rgba(2, 0, 36, 0) 60%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(198, 117, 9, 1) 100%
+    );
+  }
+}
+.theme-cm-orange {
+  box-sizing: border-box;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(186, 108, 0, 0.1),
+    rgba(186, 108, 0, 0.1) 10px,
+    rgba(255, 255, 255, 0.2) 0,
+    rgba(255, 255, 255, 0.2) 20px
+  );
+  border: solid 1px rgba(186, 108, 0, 0.2);
+}
+
+// -- gray -------------- //
+a.theme_linkcolor-gray {
+  color: $theme_color-gray;
+}
+.theme_color-gray {
+  color: $theme_color-gray;
+}
+.theme_bgcolor-gray {
+  background-color: $theme_color-gray;
+}
+.theme_bordercolor-gray {
+  border-color: $theme_color-gray;
+}
+.theme_pagebg-gray {
+  background: linear-gradient(#353535, #5c5c5c);
+}
+.theme-img-gradient-gray {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-image: linear-gradient(180deg, transparent 0 30%, #000 70% 100%);
+    // background: rgb(2, 0, 36);
+    background: linear-gradient(
+      180deg,
+      // rgba(2, 0, 36, 0) 0%,
+      // rgba(2, 0, 36, 0) 60%,
+      // rgba(0, 0, 0, 1) 80%,
+      // rgba(43, 123, 224, 1) 100%
+      rgba(2, 0, 36, 0) 0%,
+      rgba(2, 0, 36, 0) 60%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(55, 55, 55) 100%
+    );
+  }
+}
+
+.theme-cm-gray {
+  box-sizing: border-box;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(245, 245, 245, 0.1),
+    rgba(245, 245, 245, 0.1) 10px,
+    rgba(136, 136, 136, 0.2) 0,
+    rgba(136, 136, 136, 0.2) 20px
+  );
+  border: solid 1px rgba(68, 68, 68, 0.2);
+}
+
+// -- font --------------------
+// @import url('https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@500;700;900&display=swap');
+
+$v-font-sans-serif: 'Hiragino Kaku Gothic ProN', 'Zen Kaku Gothic New', 'Helvetica Neue',
+  'Helvetica', 'Hiragino Sans', 'Arial', 'Yu Gothic', 'Meiryo', sans-serif;
+$v-font-serif: 'Times New Roman', 'YuMincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho',
+  serif;
+$v-font-size-default: 16;
+$v-font: $v-font-sans-serif;
+
+// -- Google font --------------------
+.v-font-noto {
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1;
+}
+.v-font-anton {
+  font-family: 'Anton', sans-serif;
+  line-height: 1;
+}
+@mixin v-font-anton {
+  font-family: 'Anton', sans-serif;
+  line-height: 1;
+}
+// -- design width --------------------
+$v-design-sp: 428; // スマホ最小幅
+$v-design-tb: 600; // スマホデザイン分岐点
+$v-design-pc: 1024; // PC最大幅
+$v-design-sm: 640; // スマホ最小幅
+$v-design-md: 768; // スマホデザイン分岐点
+$v-design-lg: 1024; // PC最大幅
+$v-design-xl: 1280; // PC最大幅
+$v-design-wide: 1536; // PC最大幅
+
+// -- breakpoints --------------------
+$v-bp: (
+  sp: 428,
+  tb: 600,
+  pc: 1024,
+  sm: 640,
+  md: 768,
+  lg: 1024,
+  xl: 1280,
+  wide: 1536,
+) !default;
+
+// -- image directory --------------------
+$imgDir: '/assets'; // 本番
+// $imgDir: '/hakoda'; // チェック
